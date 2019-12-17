@@ -32,7 +32,7 @@ Le dataset a été pris à partir de ce lien:
 
 https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria/data
 
-### Inspiration et liens:
+### Inspirations et liens:
 
 	* https://keras.io/
 	* https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/
