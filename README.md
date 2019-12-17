@@ -8,7 +8,7 @@ Ce projet a pour but de classifier des cellules infectées ou non par le malaria
 
 Il comprend trois principaux fichiers sources:
 
-	* program.py     : est le programme qui crée un modèle simple avec des convolutions, l'entraîne et l'évalue. Il produit deux fichiers pour la sauvegarde du model et de ses poids; basicModel.h5 et basicWeights.h5.
+	### program.py     : est le programme qui crée un modèle simple avec des convolutions, l'entraîne et l'évalue. Il produit deux fichiers pour la sauvegarde du model et de ses poids; basicModel.h5 et basicWeights.h5.
 
 	* testResNet50.py: programme qui utilise la technologie ResNet50 (qui n'est pour l'instant pas fiable car résultats trop médiocres). Il produit deux fichiers pour la sauvegarde du model et de ses poids; ResNet50Model.h5 et ResNet50Weights.h5.
 
@@ -27,7 +27,8 @@ Il comprend trois principaux fichiers sources:
 				
 ### Datas:
 Le dataset a été pris à partir de ce lien:
-	* https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria/data
+
+https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria/data
 
 ### Inspiration et liens:
 
