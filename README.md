@@ -24,7 +24,7 @@ Il comprend trois principaux fichiers sources:
 
 		$ python3 predict.py [ResNet50|basicModel] cheminVersImage1 cheminVersImage2 ....
 
-		Avec cette dernière les prédictions sont faites uniquement sur les images citées en arguments en ligne de commande.
+		Avec cette dernière, les prédictions sont faites uniquement sur les images citées en arguments en ligne de commande.
 				
 				
 ### Datas:
