@@ -8,15 +8,16 @@ import numpy
 import random
 
 from keras import backend
+import matplotlib.pyplot as plt
 from keras.utils import np_utils
 from keras.optimizers import SGD
 from keras.models import Sequential
 from keras.preprocessing import image
+from keras.utils.vis_utils import plot_model
 from keras.layers import Conv2D, MaxPooling2D
 from sklearn.model_selection import train_test_split
 from keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Dense, Dropout, Activation, Flatten
-
 
 # Only used for debug
 from pprint import pprint
@@ -120,7 +121,7 @@ def amplifyData():
 
 def fitModel(model, X_train, y_train, validationData, nbEpochs, batchSize):
     print("**********  Fit model  ********** \n")
-    model.fit(X_train, numpy.array(y_train), epochs=nbEpochs, batch_size=batchSize, verbose=2)
+    return model.fit(X_train, numpy.array(y_train), epochs=nbEpochs, batch_size=batchSize, verbose=2)
 
 
 
@@ -184,12 +185,25 @@ if __name__ == "__main__":
     printModelSummary(model)
     # imageDataGenerator = amplifyData()
     # fitModelGenerator(model, imageDataGenerator, X_train, y_train, (numpy.array(X_test), y_test), nbEpochs=25, batchSize=10)
-    fitModel(model, X_train, y_train, (numpy.array(X_test), y_test), nbEpochs=25, batchSize=10)
+    epochs = 25 
+    History = fitModel(model, X_train, y_train, (numpy.array(X_test), y_test), nbEpochs=epochs, batchSize=10)
     printModelSummary(model)
     evaluateModel(model, (X_test, y_test))
 
     model.save("basicModel.h5")
     model.save_weights("basicWeights.h5")
+    plot_model(model, to_file='basicModelLayers.png', show_shapes=True, show_layer_names=True)
+
+
+    plt.figure()
+    # pprint(History.history)
+    plt.plot(numpy.arange(0, epochs), History.history["loss"], label="train_loss")
+    plt.plot(numpy.arange(0, epochs), History.history["acc"], label="train_acc")
+    plt.title("Loss and Accuracy")
+    plt.xlabel("Epoch ")
+    plt.ylabel("Loss/Accuracy")
+    plt.legend(loc="upper left")
+    plt.savefig("graph.png")
 
 
 
@@ -200,49 +214,4 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# model.add(Dense(250, activation='relu'))
-    # model.add(Dense(125, activation='relu'))
-    # model.add(Dense(60, activation='relu'))
-
-    # model.add(Dense(10, activation='relu'))
-    # model.add(Dense(30, activation='relu'))
-    
-    # if nbClasses > 1:
-    #     model.add(Dense(nbClasses, activation='softmax'))
-
-    # else: 
 
