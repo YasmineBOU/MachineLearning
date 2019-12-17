@@ -18,6 +18,7 @@ Il comprend trois principaux fichiers sources:
 
 
 Pour l'exécuter, il faut procéder comme suit:
+
 	$ python3 predict.py [ResNet50|basicModel]
 
 Indiquer soit ResNet50 ou basicModel. Avec cette ligne de commande, le programme prend tout le dataset prévu pour les prédictions ('TestPredictions') et renvoie les prédictions faites sur chacune des images et renvoie les pourcentages finaux de la prédiction pour chacun des répertoires présents dans le dossier 'TestPredictions'.
