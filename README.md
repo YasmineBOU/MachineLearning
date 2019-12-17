@@ -1,13 +1,16 @@
 # MachineLearning
 
-Nom 		 : BOUDJEMAÏ
+Nom 	 : BOUDJEMAÏ
+
 Prénom	 : Yasmine
+
 Matricule: 16 70 53 24
+
 Niveau	 : M1 Informatique
 
 
 
-## Description du projet
+### Description du projet
 
 	Ce projet a pour but de classifier des cellules infectées ou non par le malaria (paludisme).
 
@@ -30,11 +33,11 @@ Niveau	 : M1 Informatique
 			Avec cette dernière les prédictions sont faites uniquement sur les images citées en arguments en ligne de commande.
 				
 				
-# Datas:
+### Datas:
 Le dataset a été pris à partir de ce lien:
 	* https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria/data
 
-# Inspiration et liens:
+### Inspiration et liens:
 
 	* https://keras.io/
 	* https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/
